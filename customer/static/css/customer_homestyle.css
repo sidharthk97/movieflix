@@ -1,0 +1,126 @@
+.container0{
+    width: 100%;
+    height: 1400px;
+    background-repeat: repeat;
+    background-color: rgb(11, 109, 170);
+
+}
+
+
+.signout{
+    
+    font-size: 22px;
+    font-weight: bold;
+     height: 60px; 
+    width: 120px;
+    vertical-align: middle;
+    padding-top: 10px;
+    margin-right: 35px;
+    margin-left: 55px;
+    text-align: center;
+    
+    background-color: blueviolet;
+    /* border: 2px solid blueviolet; */
+    text-decoration: none; 
+   
+}
+
+.asignin{  /* for 'a' tag */
+    text-decoration: none;     /* it is done to remove underline from the 'a' tag */
+    color: white;
+}
+
+.asignup{  /* for 'a' tag */
+    text-decoration: none;     /* it is done to remove underline from the 'a' tag */
+    color: white;
+}
+
+.afooter{  /* for 'a' tag */
+    text-decoration: none;     /* it is done to remove underline from the 'a' tag */
+    color: white;
+
+}
+
+
+.navbar{
+    background-color: rgb(0, 0, 0, 0.7);
+    padding-right: 30px;
+}
+.language{
+    
+    color: white;
+    text-decoration: none;  
+    padding-right: 20px;
+}
+
+
+.container1{
+    width: 100%;
+    padding: 10px;
+    position: absolute;
+    top: 100px;
+}
+
+
+
+
+a{  /* for 'a' tag */
+    text-decoration: none;     /* it is done to remove underline from the 'a' tag */
+    color: white;
+
+}
+
+
+.movietitle{
+    
+    text-align: center;
+    /* border:1px solid white; */
+    font-size: 50px;
+    color: white;
+    background-color: blue;
+}
+
+#movie .card:hover{
+    transform: scale(1.1);
+}
+
+.moviemore{
+    /* grid-area: 6/2/7/4; */
+    text-align: center;
+    color: white;
+    border:1px solid white;
+    background-color: rgb(36, 36, 36);
+    height: 50px;
+    padding-top: 15px;
+}
+
+
+.footer{
+    background-color: black;
+    color: grey;
+    /* border: 2px solid red; */
+    width: 100%;
+    height:200px;
+    position: absolute;
+    top: 1325px;
+    left: 0px;
+    
+    padding: 20px;
+   
+
+}
+.fcol{
+    font-size: 20px;
+    height: 40px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    vertical-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    
+    /* border: 2px solid blueviolet; */
+}
+
+
+

@@ -1,0 +1,134 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'css/signupstyle.css' %} ">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %} ">
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}">
+    </script> 
+
+
+</head>
+<body>
+
+    
+<div class="container0" style="background-image:url('/static/images/bg1.jpg'); "  >
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'common:common_index' %}" >
+                <img src="static/images/newlogo.png" height="70px" width="250px" no-repeat >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                    
+                    <li class="nav-item dropdown">
+                        <a class="language dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            English
+                        </a>
+                        <ul class="dropdown-menu">
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">English</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Hindi</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">German</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Malayalam</a></li>
+                        </ul>
+                    </li>
+                            
+                </ul>
+              
+        
+            </div>
+        </div>
+    </nav>
+    <section id="logup">
+    <div class="card1 w-50 mb-3">
+        <div class="card-body">
+            <p class="card-text">
+                <h1>Sign Up</h1>
+                <br />
+                
+            </p>
+            <form method="get" action="{% url 'customer:customer_home' %}">
+                <input class="form-control me-2" type="text" placeholder="Please enter your Email Id" size="40" aria-label="Email Id"><br />
+                <input class="form-control me-2" type="text" placeholder="Please enter your Mobile number" size="40" aria-label="Mobile"><br />
+                <input class="form-control me-2" type="password" placeholder="Enter Password" size="40" aria-label="Password"><br />
+                <h4><input type="checkbox" />Remember me</h4><br />
+                <button class="btn btn-primary" type="submit" style="width:150px;height: 60px;"><a>Sign Up</a></button>
+                <div class="signin_learnmore">
+                    <h4><br />Already have an account in Movieflix?<br />
+                        Then <a class="asignin" href="{% url 'common:common_signin' %}"> Sign In </a>now.</h4>
+                    <h6>This page is protected by Google reCAPTCHA <br />
+                        to ensure you're not a bot. Learn more.</h6>
+                </div>
+            </form>
+            
+        </div>  
+                  
+    </div>
+    </section>
+
+    <div class="footer text-center">
+        <div class="row row-cols-3">
+            <div class="fcol"><a class="afooter" href="{% url 'common:common_faqs' %}">FAQs</a></div>
+            <div class="fcol"><a class="afooter" href="{% url 'common:common_contact' %}">Contact Us</a></div>
+            <div class="fcol">Privacy</div>
+            <div class="fcol">Career</div>
+            <div class="fcol">Legal notes</div>
+            <div class="fcol">Terms of Use</div>
+            <div class="col-12"><hr/></div>
+            <div class="col-12">Copyright belongs to Movieflix solutions</div>
+        </div>
+    </div>
+
+
+</div>
+
+
+
+
+
+<!-- 
+        <div class="container1">
+            <div>
+            <img src="static/images/bg1.jpg" alt="bg1" height="700px" width="100%">
+            </div>
+            <div class="shade">
+            </div>
+            <div class="content1">
+                <h1>Sign Up</h1><br />
+                <form method="get" action="{% url 'customer:customer_home' %}">                    
+                    <input name="username" type="text" placeholder=" Email " size="40"/><br /><br />
+                    <input name="username" type="text" placeholder=" Mobile number" size="40"/><br /><br />
+                    <input type="password" placeholder="Password" size="40"/><br />
+                    <h4><input type="checkbox" />Remember me</h4>
+                    <div class="signup">
+                    <a href="{% url 'customer:customer_home' %}"><h3>Sign Up</h3></a>
+                    </div>
+                    <div class="signup_learnmore">
+                    <h3>Already have an account in Movieflix?<br />
+                         Then <a href="{% url 'common:common_signin' %}"> Sign In </a>now.</h3>
+                    <h4>This page is protected by Google reCAPTCHA <br />
+                        to ensure you're not a bot. Learn more.</h4>
+                    </div>
+                    
+                </form>
+            </div>
+     
+        </div> -->
+
+
+</body>
+</html>

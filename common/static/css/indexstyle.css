@@ -1,0 +1,145 @@
+.container0{
+    width: 100%;
+    height: 1900px;
+    
+    background-repeat: no-repeat;
+    background-color: rgb(11, 109, 170);
+
+}
+
+
+.signin{
+    
+    font-size: 22px;
+    font-weight: bold;
+     height: 60px; 
+    width: 120px;
+    vertical-align: middle;
+    padding-top: 10px;
+    margin-right: 35px;
+    margin-left: 55px;
+    text-align: center;
+    
+    background-color: blueviolet;
+    border: 2px solid blueviolet;
+    text-decoration: none; 
+   
+}
+
+.asignin{  /* for 'a' tag */
+    text-decoration: none;     /* it is done to remove underline from the 'a' tag */
+    color: white;
+}
+.afooter{  /* for 'a' tag */
+    text-decoration: none;     /* it is done to remove underline from the 'a' tag */
+    color: white;
+
+}
+
+.navbar{
+    background-color: rgb(0, 0, 0, 0.5);
+    
+}
+.language{
+    color: white;
+    text-decoration: none;  
+}
+
+
+.index_content1{
+    width: 500px;
+    height: 350px;  
+    font-weight: bolder;
+    /* border: 2px solid red;  */
+    font-size: x-large;
+    color: white;
+    position: absolute;
+    top: 200px;
+    left: 280px;
+    text-align: center;
+    
+}
+
+
+.card1{
+    position: absolute;
+    top: 200px;
+    left: 150px;
+    text-align: center;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.card2{
+    position: absolute;
+    top:700px ;
+    background-color: rgb(31, 31, 31);
+    height: 500px;
+    text-align: center;
+    
+    
+}
+ .tvimage{
+    padding-top: 40px;
+ }
+
+
+.index_content2{
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 100px;
+  
+}
+.card3{
+    position: absolute;
+    top:1220px ;
+    background-color: rgb(31, 31, 31);
+    height: 500px;
+    text-align: center;
+    
+    
+}
+.index_content3{
+    display: inline-block;
+    color: white;
+    font-size: 30px;
+    font-weight: bolder;
+    text-align: center;
+    padding-top: 120px;
+  
+}
+.mobileimage{
+    padding-top: 40px;
+}
+
+
+.footer{
+    background-color: black;
+    color: grey;
+    /* border: 2px solid red; */
+    width: 100%;
+    height:200px;
+    position: absolute;
+    top: 1740px;
+    left: 0px;
+    
+    padding: 20px;
+   
+
+}
+.fcol{
+    font-size: 20px;
+    height: 40px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    vertical-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    
+    /* border: 2px solid blueviolet; */
+}
+

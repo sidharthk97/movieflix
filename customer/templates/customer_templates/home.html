@@ -1,0 +1,224 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home page</title>
+    <link rel="stylesheet" href="{% static 'css/customer_homestyle.css' %} ">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %} ">
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}">
+    </script> 
+
+
+</head>
+<body>
+<div class="container0" style="background-image:url('/static/images/bg1.jpg'); " >
+            
+        <nav class="navbar navbar-expand-lg fixed-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="{% url 'common:common_index' %}" >
+                    <img src="/static/images/newlogo.png" height="70px" width="250px" no-repeat >
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+                            
+                        <li class="nav-item dropdown">
+                            <a class="language dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                English
+                            </a>
+                            <ul class="dropdown-menu">
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">English</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Hindi</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">German</a></li>
+                                    <li><hr class="dropdown-divider"></li>
+                                    <li><a class="dropdown-item" href="#">Malayalam</a></li>
+                            </ul>
+                        </li>
+                            
+                    </ul>
+                    <form class="d-flex" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <button class="btn btn-outline-success" type="submit">Search</button>
+                    </form>
+
+                    <div class="signout">
+                        <a class="asignin" href="{% url 'common:common_index' %}">Sign Out</a>
+                    </div>                      
+        
+                </div>
+            </div>
+        </nav>
+        
+    <section id="movie">
+        <div class="container1">
+        <div class="row row-cols-1 row-cols-md-4 g-4" >
+            <div class="col-12">
+                <div class="movietitle">
+                    <label> Your favourite Movies</label>
+                </div>
+            </div>
+
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie1.png" alt="movie1" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Kabhi Khushi Kabhie Gham</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie2.png" alt="movie2" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Ponniyin Selvan-1</h5>
+                    </div>
+                </div>
+            </div><div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie3.png" alt="movie3" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Lucifer</h5>
+                    </div>
+                </div>
+            </div><div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie4.png" alt="movie4" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Kuch Kuch Hota Hai</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie5.png" alt="movie5" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Kantara</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie6.png" alt="movie6" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Harry Potter-5</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie7.png" alt="movie7" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">K.G.F chapter-2</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie8.png" alt="movie8" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Kungfu Panda-3</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie9.png" alt="movie9" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">fast & Furious 9</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie10.png" alt="movie10" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Tiger zinda hai</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie11.png" alt="movie11" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Drishyam-2</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie12.png" alt="movie12" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Chak De! India</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie13.png" alt="movie13" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">San Andreas</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie14.png" alt="movie14" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Niram</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie15.png" alt="movie15" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Mission Impossible: Fallout</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col">
+                <div class="card h-100">
+                    <img src="/static/images/movie16.png" alt="movie16" class="card-img-top">
+                    <div class="card-body">
+                        <h5 class="card-title">Interstellar</h5>
+                    </div>
+                </div>
+            </div>
+            <div class="col-12">
+                <div class="moviemore">
+                    <label> More Movies </label>
+                </div>
+            </div>
+
+        </div> 
+        </div>        
+    </section>           
+            
+        <div class="footer text-center">
+            <div class="row row-cols-3">
+                <div class="fcol"><a class="afooter" href="{% url 'common:common_faqs' %}">FAQs</a></div>
+                <div class="fcol"><a class="afooter" href="{% url 'common:common_contact' %}">Contact Us</a></div>
+                <div class="fcol">Privacy</div>
+                <div class="fcol">Career</div>
+                <div class="fcol">Legal notes</div>
+                <div class="fcol">Terms of Use</div>
+                <div class="col-12"><hr/></div>
+                <div class="col-12">Copyright belongs to Movieflix solutions</div>
+            </div>
+        </div>   
+           
+                
+    
+</div>
+</body>
+</html>

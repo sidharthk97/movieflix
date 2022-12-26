@@ -1,0 +1,95 @@
+.container0{
+    width: 100%;
+    height: 1250px;
+    
+    background-repeat: no-repeat;
+    background-color: rgb(11, 109, 170);
+
+}
+
+
+.signin{
+    
+    font-size: 22px;
+    font-weight: bold;
+     height: 60px; 
+    width: 120px;
+    vertical-align: middle;
+    padding-top: 10px;
+    margin-right: 35px;
+    margin-left: 55px;
+    text-align: center;
+    background-color: blueviolet;
+    /* border: 2px solid blue; */
+    text-decoration: none; 
+   
+}
+
+.asignin{  /* for 'a' tag */
+    text-decoration: none;     /* it is done to remove underline from the 'a' tag */
+    color: white;
+}
+.afooter{  /* for 'a' tag */
+    text-decoration: none;     /* it is done to remove underline from the 'a' tag */
+    color: white;
+
+}
+
+.navbar{
+    background-color: rgb(0, 0, 0, 0.5);
+    
+}
+.language{
+    color: white;
+    text-decoration: none;  
+}
+
+a{  /* for 'a' tag */
+    text-decoration: none;     /* it is done to remove underline from the 'a' tag */
+    color: white;
+
+}
+
+
+.content1{
+    
+    height: 910px;  
+    width: 100%;
+    font-weight: bolder;
+    /* border: 2px solid green; */
+    color: white;
+    background-color: rgba(0, 0, 0,0.7);
+    position: absolute;
+    top: 150px;
+    left: 0px; 
+    text-align: center;
+    
+}
+
+
+.footer{
+    background-color: black;
+    color: grey;
+    /* border: 2px solid red; */
+    width: 100%;
+    height:200px;
+    position: absolute;
+    top: 1135px;
+    left: 0px;
+    
+    padding: 20px;
+   
+
+}
+.fcol{
+    font-size: 20px;
+    height: 40px;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    vertical-align: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: center;
+    
+    /* border: 2px solid blueviolet; */
+}
