@@ -1,0 +1,136 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin homepage</title>
+    <link rel="stylesheet" href="{% static 'css/siteadmin.css' %} ">
+    <link rel="stylesheet" href="{% static 'bootstrap/css/bootstrap.css' %} ">
+    <script src="{% static 'bootstrap/js/bootstrap.js' %}"></script> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+
+<div class="container0" style="background-color: antiquewhite;" >
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="{% url 'common:common_index' %}" >
+                <img src="/static/images/newlogo.png" height="70px" width="250px" no-repeat >
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0 " >
+                    <li class="nav-item active">
+                        <a class="nav-link" style="color: white;margin-right: 150px;">Welcome Admin ! </a>
+                    </li>
+                    <li class="nav-item active">
+                        <a id="adminhome" href="{% url 'siteadmin:admin_home' %} " class="nav-link" style="color: white;margin-right: 150px;">Admin Home </a>
+                    </li>
+                        
+                    <li class="nav-item dropdown" >
+                        <a class="language dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+                            <button  class="btn btn-outline-light" type="button" >English</button>
+                        </a>
+                        <ul class="dropdown-menu">
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#" >English</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Hindi</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">German</a></li>
+                                <li><hr class="dropdown-divider"></li>
+                                <li><a class="dropdown-item" href="#">Malayalam</a></li>
+                        </ul>
+                    </li>
+                        
+                </ul>
+                <!-- <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form> -->
+
+                <div class="signout">
+                    <!-- <a class="asignout"  href="{% url 'customer:customer_signout' %}">Sign Out</a> -->
+                    <a href="{% url 'siteadmin:siteadmin_signout' %}"><button  class="btn btn-outline-light" type="button" >Sign Out</button></a>
+                </div>                      
+    
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container1" >
+        <div class="row" >
+
+            <div class="col-12">
+                <div style="background-color: rgb(39, 38, 38);color: white;text-align: center;">
+                     <h3 style="display: inline-flex;">Customer List</h3>
+                     <!-- <a style="display: inline-flex; float: right; margin-right: 20%;" href="{% url 'siteadmin:siteadmin_addmovie' %}" class="btn btn-success" >
+                        Add New Movie<i class="fa fa-plus" aria-hidden="true"></i>
+                        
+                    </a> -->
+                </div>
+                <br />
+            </div>
+        </div>
+        <br />
+        <div class="row" ">
+            
+            <div class="col-12" style="text-align: center;">
+                <table id="list"  style="margin: auto;padding: auto; width: 80%; font-weight: bolder; font-size: large; background-color: gray;">
+                    <thead style="border-bottom: 2px;">
+                        <tr>
+                            <td>Id No.</td>
+                            <td>Customer First Name</td>
+                            <td>Customer Last Name</td>
+                            <td>Mobile No.</td>
+                            <td>Email</td>
+                            <td>Password</td>
+                            <td>Modify</td>
+                            <td>Delete</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for customer in customerlist %}
+                            <tr>
+                                <td>{{ customer.id }}</td>
+                                <td>{{ customer.first_name }}</td>
+                                <td>{{ customer.last_name}}</td>
+                                <td>{{ customer.mobile }}</td>
+                                <td>{{ customer.email }}</td>
+                                <td>{{ customer.password }}</td>
+                                <td><a href="{% url 'siteadmin:siteadmin_modify' customer.id %}" class="btn btn-success"><i class="fa fa-edit fa-lg"></i></a></td>
+                                <td>
+                                    <form method="post" action="{% url 'siteadmin:siteadmin_customerdelete' customer.id %}">
+                                        {% csrf_token %}
+                                        <button type="submit" class="btn btn-danger"><i class="fa fa-trash fa-lg"></i></button>
+                                    </form>
+                                </td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+            </div>
+            
+        </div>
+        
+    </div>    
+</div>
+
+<div class="footer text-center">
+    <div class="row row-cols-3">
+        <div class="fcol">Privacy</div>
+        <div class="fcol">Legal notes</div>
+        <div class="fcol">Terms of Use</div>
+        <div class="col-12"><hr/></div>
+        <div class="col-12">Copyright belongs to Movieflix solutions</div>
+    </div>
+</div>
+
+
+</body>
+</html>

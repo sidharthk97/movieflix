@@ -40,7 +40,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'common',
     'customer',
-    'movieflix_admin',
+    'siteadmin'
 
 ]
 
@@ -80,8 +80,11 @@ WSGI_APPLICATION = 'movieflix.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'movieflix',
+        'USER': 'postgres',
+        'PASSWORD': 'root',
+        'HOST': 'localhost'
     }
 }
 
@@ -121,11 +124,12 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR,'media')
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static/common'),
     os.path.join(BASE_DIR, 'static/customer'),
-    os.path.join(BASE_DIR, 'static/movieflix_admin'),
+    os.path.join(BASE_DIR, 'static/siteadmin'),
 ]
 
 # Default primary key field type

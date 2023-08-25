@@ -68,12 +68,35 @@
         <div class="card-body">
             <p class="card-text">
                 <h1>Sign In</h1>
-                <br />
-                
+                <br />               
             </p>
-            <form method="get" action="{% url 'customer:customer_home' %}">
-                <input class="form-control me-2" type="text" placeholder="Email Id or Phone number" size="40" aria-label="Email Id"><br />
-                <input class="form-control me-2" type="password" placeholder="Password" size="40" aria-label="Password"><br />
+
+
+
+            <form method="POST" action="">
+
+                {% csrf_token %}
+                {% for message in messages %}
+                <span style="color: green;font-size: 20px;">{{ message }}</span><br />
+                {% endfor %}
+                <div style="display: inline-block;">
+                    <label >Username :</label>
+                </div>
+                <div style="display: inline-block;">
+                    <input class="form-control me-2" required type="text" placeholder="Email Id or Phone number" size="40" name="username" >                   
+                </div>
+                <br />
+                <br />  
+                <div style="display: inline-block;">
+                    <label>Password : </label>
+                </div>
+                <div style="display: inline-block;">
+                    <input class="form-control me-2" required type="password" placeholder="Password" size="40" name="password">         
+                </div>
+                <br />  
+                <span id="error_message" style="color: red;font-size: 20px;">{{ error_message }}</span>
+                <br />
+
                 <h4><input type="checkbox" />Remember me</h4><br />
                 <button class="btn btn-primary" type="submit" style="width:150px;height: 60px;"><a>Sign In</a></button>
                 <div class="signin_learnmore">
@@ -81,6 +104,7 @@
                     <h6><br />This page is protected by Google reCAPTCHA <br />
                         to ensure you're not a bot. Learn more.</h6>
                 </div>
+
             </form>
             
         </div>                       

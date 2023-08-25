@@ -61,10 +61,19 @@
                 <br />
                 
             </p>
-            <form method="get" action="{% url 'customer:customer_home' %}">
-                <input class="form-control me-2" type="text" placeholder="Please enter your Email Id" size="40" aria-label="Email Id"><br />
-                <input class="form-control me-2" type="text" placeholder="Please enter your Mobile number" size="40" aria-label="Mobile"><br />
-                <input class="form-control me-2" type="password" placeholder="Enter Password" size="40" aria-label="Password"><br />
+            <form method="POST" action="" >
+                <!-- action="{% url 'common:common_signin' %}" -->
+                {% csrf_token %}
+                <input class="form-control me-2" type="text" required placeholder="Please enter your First name" size="40" name="first_name"><br />
+                <input class="form-control me-2" type="text" required placeholder="Please enter your Last name" size="40" name="last_name"><br />
+                <input class="form-control me-2" type="text" required placeholder="Please enter your Email Id" size="100" name="email"><br />
+                <input class="form-control me-2" type="text" required placeholder="Please enter your Mobile number" size="40" name="mobile"><br />
+                
+                <input class="form-control me-2" type="password" placeholder="Enter Password" size="40" name="password"><br />       
+                <input class="form-control me-2" type="password" placeholder="Confirm Password" size="40" name="c_password"><br />
+                <span style="color: red;font-size: 20px;">{{ message }}</span>
+               
+                
                 <h4><input type="checkbox" />Remember me</h4><br />
                 <button class="btn btn-primary" type="submit" style="width:150px;height: 60px;"><a>Sign Up</a></button>
                 <div class="signin_learnmore">
