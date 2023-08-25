@@ -16,9 +16,19 @@ def common_index(request) :
     return render(request,'common_templates/index.html')
 
 def common_contact(request):
+    
+    if request.session.has_key('customer'):
+        del request.session['customer']
+        
+    request.session.flush()
     return render(request,'common_templates/contact.html')
 
 def common_faqs(request):
+    
+    if request.session.has_key('customer'):
+        del request.session['customer']
+        
+    request.session.flush()
     return render(request,'common_templates/faqs.html')
 
 def common_signin(request):
